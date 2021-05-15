@@ -21,6 +21,7 @@ function generateCode() {
 function copyText(button) {
 	outputCode.select();
 	document.execCommand('copy');
+	window.getSelection().removeAllRanges();
 	button.textContent = 'Copied!';
 	setTimeout(() => button.textContent = 'Copy', 2000);
 }
